@@ -1,0 +1,63 @@
+************************************************
+Giavinh Lam             0925571
+CIS2520                 A2
+10/07/2016              glam01@mail.uoguelph.ca
+************************************************
+
+***********
+Compilation
+***********
+Assuming that you are in the main folder's directory in the terminal:
+make
+
+******************
+Running and Usage
+******************
+Assuming that you are in the main folder's directory in the terminal:
+./q1 assets/data.txt (for linked list program)
+./q2 x (x represents the expression the user wants to convert to post-fix notation)
+
+************************
+How the Program(s) Works
+************************
+For q1: User will be able to manage a car rental company through the implementation of linked lists. When they first start the program, they'll be given a menu system
+where they can add a new car to a list, mark a car rented, mark a car that needs to be repaired, and send cars back to the availible list once that is possible. The
+user will enter numbers corresponding to each of these functions in order to use them. Finally when the user quits, their lists will be saved and ready for next time.
+
+For q2: User can enter an expression in post-fix notation as an argument when running this program
+and the program will evaluate and print the value.
+
+************************************
+Sample Input and Output of Programs
+************************************
+q1 output (just introduction as user has to enter a dedicated number in order to access the main program functionalities) =
+Welcome to the program. Enter one of the following numbers for it's corresponding functions:
+(1) Add a new car to the availible-for-rent list.
+(2) Add a returned car to the availible-for-rent list.
+(3) Add a returned car to the repair list.
+(4) Transfer a car from the repair list to the availible-for-rent list.
+(5) Rent the first availible car.
+(6) Print all the lists.
+(7) Quit.
+
+
+q2 output (with an argument of: '12+53-*') =
+Expression is equal to: 6.00
+
+***************
+Program Design
+***************
+1. For options (2) and (3) -> Mileage prompted for is the distance (in miles) that the user drove while car is rented. When transferred to the
+availible-for-rent list, this mileage is added to the original mileage of the car and this becomes the total mileage for the car.
+
+******************
+Known Limitations
+******************
+For q1:
+If user enters a string > 1000 characters instead of a number for q1.c, program may not work as intended (same thing goes for exceeding other array index sizes as well).
+Program assumes a plate number with 4 capital letters and 3 numbers (like a standard license plate in Ontario). Though, there are no restrictions regarding where each character is located.
+The program does not check the return dates for legitimate months/years/days (ex. input will not be denied for a 13th month, or months with 70 days...).
+
+For q2:
+If argument is longer than 100 characters, program may not work as expected.
+Using certain characters in the argument may make the program to not work as expected.
